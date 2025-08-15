@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale-1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Quarterly Earnings Report</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/monokai.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Quarterly Earnings Report</h2>
+					<h4>Q3 2025 Financial Review</h4>
+					<p>Major Financial Institution</p>
+					<p>Contact: 23f3002755@ds.study.iitm.ac.in</p>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Agenda
+						- Key Financial Highlights
+						- Performance Analysis
+						- Strategic Initiatives
+						- Outlook & Projections
+					</textarea>
+				</section>
+
+				<section>
+					<h3>Financial Formula: ROI</h3>
+					<p>We use Return on Investment (ROI) to evaluate the efficiency of an investment.</p>
+					<p class="fragment">
+						$$
+						\text{ROI} = \frac{\text{Net Profit}}{\text{Cost of Investment}} \times 100\%
+						$$
+					</p>
+				</section>
+
+				<section>
+					<h3>Risk Analysis Script</h3>
+					<p>Python code used for calculating Value at Risk (VaR).</p>
+					<pre><code class="language-python" data-line-numbers>
+import numpy as np
+from scipy.stats import norm
+
+def calculate_var(portfolio_value, mu, sigma, confidence_level=0.95):
+  z_score = norm.ppf(1 - confidence_level)
+  var = portfolio_value * (mu + z_score * sigma)
+  return abs(var)
+
+value = 1_000_000
+daily_return_mean = 0.0005
+daily_return_std = 0.01
+
+var_95 = calculate_var(value, daily_return_mean, daily_return_std)
+print(f"95% Daily VaR: ${var_95:,.2f}")
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Thank You</h2>
+					<p>Open for Questions</p>
+				</section>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/math/math.min.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
