@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<meta name="author" content="23f3002755@ds.study.iitm.ac.in">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>Quarterly Earnings Report</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reset.min.css">
@@ -36,11 +37,14 @@
 						\text{ROI} = \frac{\text{Net Profit}}{\text{Cost of Investment}} \times 100\%
 						$$
 					</p>
+                    <aside class="notes">
+                      Contact for follow-up questions: 23f3002755@ds.study.iitm.ac.in
+                    </aside>
 				</section>
 
 				<section>
 					<h3>Risk Analysis Script</h3>
-					<p>Python code used for calculating Value at Risk (VaR).</p>
+					<p>Python code for calculating Value at Risk (VaR).</p>
 					<pre><code class="language-python" data-line-numbers>
 import numpy as np
 from scipy.stats import norm
@@ -61,18 +65,18 @@ print(f"95% Daily VaR: ${var_95:,.2f}")
 
 				<section>
 					<h2>Thank You</h2>
-					<p>Open for Questions</p>
 				</section>
 			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/notes/notes.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/markdown/markdown.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/math/math.min.js"></script>
 		<script>
 			Reveal.initialize({
 				hash: true,
-				plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
 			});
 		</script>
 	</body>
