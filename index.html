@@ -1,92 +1,93 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Quarterly Earnings</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section data-background-color="#0f2027">
-        <h2>Quarterly Earnings</h2>
-        <p>23f3002755@ds.study.iitm.ac.in</p>
-        <aside class="notes">Intro. Press S to view notes.</aside>
-      </section>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="23f3002755@ds.study.iitm.ac.in">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Quarterly Earnings Report</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css" id="theme">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/monokai.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Quarterly Earnings Report</h2>
+					<p>Presenter Contact:</p>
+					<h4><a href="mailto:23f3002755@ds.study.iitm.ac.in">23f3002755@ds.study.iitm.ac.in</a></h4>
+				</section>
 
-      <section>
-        <h3>Highlights</h3>
-        <ul>
-          <li class="fragment">Revenue +7% YoY</li>
-          <li class="fragment">Operating margin 18.4%</li>
-          <li class="fragment">EPS $1.42</li>
-          <li class="fragment">Free cash flow $640M</li>
-        </ul>
-        <aside class="notes">Pace the reveal with fragments.</aside>
-      </section>
+				<section data-markdown>
+					<textarea data-template>
+						## Agenda
+						- Key Financial Highlights
+						- Performance Analysis
+						- Strategic Initiatives
+						- Outlook & Projections
+					</textarea>
+				</section>
 
-      <section data-markdown>
-        <textarea data-template>
-### Business Mix (Markdown)
-- Retail 42%
-- Corporate & Investment 38%
-- Wealth 20%
+				<section>
+					<h3>Financial Formula: ROI</h3>
+					<p>We use Return on Investment (ROI) to evaluate the efficiency of an investment.</p>
+					<p>
+						$$
+						\text{ROI} = \frac{\text{Net Profit}}{\text{Cost of Investment}} \times 100\%
+						$$
+					</p>
+                    <aside class="notes">
+                      Contact for follow-up questions: 23f3002755@ds.study.iitm.ac.in
+                    </aside>
+				</section>
 
-CET1 strong; NIM resilient.
-        </textarea>
-        <aside class="notes">Diversification + capital strength.</aside>
-      </section>
+                <section>
+                    <h3>Formula: Compound Interest</h3>
+                    <p>Calculates the future value of an investment.</p>
+                    <p>
+                        $$
+                        A = P \left(1 + \frac{r}{n}\right)^{nt}
+                        $$
+                    </p>
+                </section>
 
-      <section>
-        <h3>Key Formulas</h3>
-        <p>$$\mathrm{NPV}=\sum_{t=1}^{T}\frac{CF_t}{(1+r)^t}-C_0$$</p>
-        <p>$$\mathbb{E}[R_i]=R_f+\beta_i(\mathbb{E}[R_m]-R_f)$$</p>
-        <aside class="notes">Discounting and risk premium.</aside>
-      </section>
+				<section>
+					<h3>Risk Analysis Script</h3>
+					<p>Python code for calculating Value at Risk (VaR).</p>
+					<pre class="fragment"><code class="language-python" data-line-numbers>
+import numpy as np
+from scipy.stats import norm
 
-      <section>
-        <h3>NPV in Python</h3>
-        <pre><code class="language-python" data-trim data-line-numbers>
-def npv(rate, cashflows):
-    return sum(cf / ((1 + rate) ** t) for t, cf in enumerate(cashflows))
+def calculate_var(portfolio_value, mu, sigma, confidence_level=0.95):
+  z_score = norm.ppf(1 - confidence_level)
+  var = portfolio_value * (mu + z_score * sigma)
+  return abs(var)
 
-print(npv(0.10, [-1000, 400, 400, 400, 400]))
-        </code></pre>
-        <aside class="notes">Walk through inputs and output.</aside>
-      </section>
+value = 1_000_000
+daily_return_mean = 0.0005
+daily_return_std = 0.01
 
-      <section>
-        <h3>Next</h3>
-        <ol>
-          <li class="fragment">Finalize disclosures</li>
-          <li class="fragment">Analyst call</li>
-          <li class="fragment">Publish pack</li>
-        </ol>
-        <aside class="notes">Confirm owners and dates.</aside>
-      </section>
+var_95 = calculate_var(value, daily_return_mean, daily_return_std)
+print(f"95% Daily VaR: ${var_95:,.2f}")
+					</code></pre>
+				</section>
 
-      <section>
-        <h2>Q&A</h2>
-        <p>Contact: 23f3002755@ds.study.iitm.ac.in</p>
-        <aside class="notes">Closeout.</aside>
-      </section>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
-    });
-  </script>
-</body>
+				<section>
+					<h2>Thank You</h2>
+				</section>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/math/math.min.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
 </html>
